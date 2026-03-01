@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: merchant-payment-processing-system
+
+  datasource:
+    # URL for local PostgreSQL; default port is 5432
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: jimmy
+    password:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      # 'update' automatically creates/updates tables based on your @Entity classes
+      ddl-auto: update
+    show-sql: true # Logs SQL queries to the console (useful for debugging)
+    properties:
+      hibernate:
+        # Explicitly sets the PostgreSQL dialect
+        #dialect: org.hibernate.dialect.PostgreSQLDialect
